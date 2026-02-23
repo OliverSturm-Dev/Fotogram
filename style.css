@@ -1,4 +1,42 @@
 :root {
     --header-footer:#09212A;
     --main-backround:#06171E;
+    --dot-color1:#ff5c7c;
+    --dot-color2:#ffd166;
+    --dot-color3:#06d6a0;
+    --dot-color4:#4ea8de;
+    --dot-color5:#b5179e;
+}
+body{
+    margin: 0;
+}
+.header{
+    background-color: var(--header-footer);
+    padding: 20px;
+    max-width: 1440px;
+}
+.logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dot{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+}
+.first{
+background-color: var(--dot-color1);
+}
+.second{
+    background-color: var(--dot-color2);
+}
+.third{
+    background-color: var(--dot-color3);
+}
+.fourth{
+    background-color: var(--dot-color4);
+}
+.fifth{
+    background-color: var(--dot-color5);
 }
