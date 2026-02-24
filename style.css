@@ -11,8 +11,16 @@
 *{
     margin: 0;
 }
+html, body{
+    height: 100%;
+}
 body{
     background-color: var(--main-backround);
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
 }
 .header{
     background-color: var(--header-footer);
