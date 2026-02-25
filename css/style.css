@@ -21,13 +21,13 @@ h1 {
   color: var(--headline);
   display: flex;
   justify-content: center;
-  align-items: center;
   padding-top: 130px;
   font-size: 56px;
   font-weight: 800;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  padding-bottom: 50px;
 }
 button{
   background: transparent;
@@ -80,10 +80,16 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .img-test{
-  height: 50vh;
+  height: 1px;
   border: 10px;
+}
+.gallery{
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    cursor: pointer;
 }
 @media (max-width: 430px) {
   .logos .dot {
@@ -93,6 +99,9 @@ button{
 @media (max-width: 767px) {
   h1 {
     font-size: 32px;
+  }
+  .gallery{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .d-none{
