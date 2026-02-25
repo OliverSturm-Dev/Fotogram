@@ -13,10 +13,7 @@ body {
 main {
   flex: 1;
 }
-.header {
-  background-color: var(--header-footer);
-  padding: 55px;
-}
+
 h1 {
   color: var(--headline);
   display: flex;
@@ -33,6 +30,10 @@ button{
   background: transparent;
   border: none;
   margin: 0;
+}
+.header {
+  background-color: var(--header-footer);
+  padding: 55px;
 }
 .logos {
   display: flex;
@@ -82,18 +83,22 @@ button{
   justify-content: center;
   cursor: pointer;
 }
-.img-test{
-  height: 1px;
-  border: 10px;
+.detail-box img{
+  height: 350px;
+  cursor: pointer;
 }
 .gallery{
   display: grid;
     grid-template-columns: repeat(4, 1fr);
     cursor: pointer;
+    padding-bottom: 15px;
 }
 @media (max-width: 430px) {
   .logos .dot {
     display: none;
+  }
+  .detail-box img{
+    height: 250px;
   }
 }
 @media (max-width: 767px) {
