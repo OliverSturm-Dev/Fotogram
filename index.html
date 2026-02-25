@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fotogram</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/data.js" defer></script>
+    <script src="./js/templates.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
-  <body>
+  <body onload="init()">
     <header class="header">
       <div class="logos">
         <span class="first dot"></span>
@@ -25,22 +29,11 @@
     <main>
       <h1>My Personal Photo Album</h1>
 
-      <section>
-        <img src="./img/vogel.png" alt="Vogel Bild" />
+      <section id="gallery" class="gallery">
+        
+      </section>
+      <section id="detail_box" class="detail-box d-none">
 
-        <img src="./img/travel.png" alt="Berg Bild" />
-
-        <img src="./img/stadt.png" alt="Stadt Bild" />
-
-        <img src="./img/snow-leopard.png" alt="SchneeLeopard Bild" />
-
-        <img src="./img/sea.png" alt="Meer Bild" />
-
-        <img src="./img/lake.png" alt="See Bild" />
-
-        <img src="./img/hurricane.png" alt="Hurricane Bild" />
-
-        <img src="./img/atmosphere.png" alt="Atmosühären Bild" />
       </section>
     </main>
     <footer class="footer">
@@ -60,5 +53,5 @@
       </section>
     </footer>
   </body>
-  <link rel="scriptsheet" href="script.js" />
+ 
 </html>
