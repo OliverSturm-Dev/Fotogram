@@ -21,4 +21,9 @@ function showDetailView(i) {
     detailBox.classList.remove("d-none");
     detailBox.innerHTML = generateDetailContentHTML(i, image);
 }
-
+function imageNext(i) {
+    if (i < images.length +1){
+        i++;
+        showDetailView(i);
+    }
+}

@@ -10,6 +10,9 @@ function  generateDetailContentHTML(i, image) {
     return /* html */ `
     <div class="img-test">
     <img src="${image.path}" alt="${image.alt}">
+
+    <button onclick="imageBack()">⬅️zurück</button>
+    <button onclick="imageNext(i)">➡️vor</button>
     </div>
     `;
 }
