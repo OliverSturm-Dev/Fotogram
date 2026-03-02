@@ -24,12 +24,12 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 125px;
 }
 button{
   background: transparent;
   border: none;
-  margin: 0;
+  padding-block: 30px;
 }
 .header {
   background-color: var(--header-footer);
@@ -81,17 +81,34 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  flex-direction: row;
 }
 .detail-box img{
   height: 350px;
-  cursor: pointer;
 }
 .gallery{
   display: grid;
     grid-template-columns: repeat(4, 1fr);
     cursor: pointer;
-    padding-bottom: 15px;
+}
+.nextbt{
+  display: flex;
+  justify-content: space-around;
+}
+.img-test button{
+  color: white;
+  cursor: pointer;
+  background-color: var(--main-backround);
+  border-radius: 30px;
+  transition: 1s;
+}
+.btimg{
+  transition: 1s;
+      padding-inline: 0px;
+}
+.btimg:hover{
+   transform: scale(1.1);
+  z-index: 2;
 }
 @media (max-width: 430px) {
   .logos .dot {
@@ -108,6 +125,10 @@ button{
   .gallery{
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.img-test button:hover{
+  transform: scale(1.3);
+  z-index: 2;
 }
 .d-none{
   display:none;

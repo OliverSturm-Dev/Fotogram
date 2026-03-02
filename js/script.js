@@ -22,8 +22,22 @@ function showDetailView(i) {
     detailBox.innerHTML = generateDetailContentHTML(i, image);
 }
 function imageNext(i) {
-    if (i < images.length +1){
-        i++;
-        showDetailView(i);
-    }
+    let nextIndex = i + 1;
+  if (i >= images.length - 1) {
+    nextIndex = 0;
+  }
+
+  showDetailView(nextIndex);
+}
+function imageBack(i) {
+    let nextIndex = i - 1;
+  if (i === 0) {
+    nextIndex = images.length - 1;
+  }
+
+  showDetailView(nextIndex);
+}
+function closeBtn() {
+   const detailContainer = document.getElementById("detail_box");
+    detailContainer.classList.add("d-none");
 }
