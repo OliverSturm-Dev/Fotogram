@@ -90,6 +90,8 @@ button{
   display: grid;
     grid-template-columns: repeat(4, 1fr);
     cursor: pointer;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .nextbt{
   display: flex;
