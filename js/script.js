@@ -48,6 +48,10 @@ function imageBack() {
 
   showDetailView(currentIndex);
 }
+function closeBtn() {
+   const detailContainer = document.getElementById("detail_box");
+    detailContainer.classList.add("d-none");
+}
 
 function handleOverlayKeys(event) {
   if (event.key === "Escape") {

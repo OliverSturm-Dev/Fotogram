@@ -92,6 +92,7 @@ button{
     cursor: pointer;
     max-width: 1440px;
     margin: 0 auto;
+     overflow: hidden;
 }
 .nextbt{
   display: flex;
@@ -107,6 +108,7 @@ button{
 .btimg{
   transition: 1s;
       padding-inline: 0px;
+      
 }
 .btimg:hover{
    transform: scale(1.1);
