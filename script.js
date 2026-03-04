@@ -1,35 +1,35 @@
 let currentIndex = 0;
 
 function init() {
-    renderImages();
+  renderImages();
 }
 
 function renderImages() {
-    const galleryBox = document.getElementById("gallery");
-    galleryBox.innerHTML = "";
+  const galleryBox = document.getElementById("gallery");
+  galleryBox.innerHTML = "";
 
-    for (let i=0; i<images.length; i++){
-        const image = images[i];
-        galleryBox.innerHTML += generateGalleryContentHTML(i, image) 
-    }
+  for (let i = 0; i < images.length; i++) {
+    const image = images[i];
+    galleryBox.innerHTML += generateGalleryContentHTML(i, image);
+  }
 }
-
-
 
 function showDetailView(i) {
   currentIndex = i;
-    const image = images[i];
-    const detailBox = document.getElementById("detail_box");
+  const image = images[i];
+  const detailBox = document.getElementById("detail_box");
 
-    detailBox.classList.remove("d-none");
-    detailBox.innerHTML = generateDetailContentHTML(i, image);
-    detailBox.focus();
+  detailBox.classList.remove("d-none");
+  detailBox.innerHTML = generateDetailContentHTML(i, image);
+  detailBox.focus();
 }
+
 function closeDetailView() {
   const detailBox = document.getElementById("detail_box");
 
   detailBox.classList.add("d-none");
 }
+
 function imageNext() {
   currentIndex++;
 
@@ -48,9 +48,10 @@ function imageBack() {
 
   showDetailView(currentIndex);
 }
+
 function closeBtn() {
-   const detailContainer = document.getElementById("detail_box");
-    detailContainer.classList.add("d-none");
+  const detailContainer = document.getElementById("detail_box");
+  detailContainer.classList.add("d-none");
 }
 
 function handleOverlayKeys(event) {
