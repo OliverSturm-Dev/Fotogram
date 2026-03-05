@@ -28,7 +28,7 @@ h1 {
 button{
   background: transparent;
   border: none;
-  padding-block: 30px;
+  padding: 16px 34px;
 }
 .header {
   background-color: var(--header-footer);
@@ -84,6 +84,7 @@ button{
 }
 .detail-box img{
   height: 350px;
+  padding: 30px;
 }
 .gallery{
   display: grid;
@@ -95,14 +96,21 @@ button{
 }
 .nextbt{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around;      
+}
+.nextbt button{
+  font-size: 18px;
 }
 .img-test button{
   color: white;
   cursor: pointer;
-  background-color: var(--main-backround);
+  background-color: var(--button-background);
   border-radius: 30px;
   transition: 1s;
+}
+.img-test button:hover{
+  transform: scale(1.3);
+  z-index: 2;
 }
 .btimg{
   transition: 1s;
@@ -112,6 +120,7 @@ button{
 .btimg:hover{
    transform: scale(1.1);
   z-index: 2;
+  opacity: 0.7;
 }
 @media (max-width: 430px) {
   .logos .dot {
@@ -129,9 +138,19 @@ button{
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.img-test button:hover{
-  transform: scale(1.3);
-  z-index: 2;
+@media (max-width: 1023px){
+  .btimg:hover{
+    transform: none;
+  }
+  .btimg{
+    transition: none;
+  }
+  .img-test button:hover{
+    transform: none;
+  }
+  .img-test button{
+    transition: none;
+  }
 }
 .d-none{
   display:none;

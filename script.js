@@ -30,7 +30,19 @@ function closeDetailView() {
   detailBox.classList.add("d-none");
 }
 
-function imageNext() {
+function navigateDetailImage(direction) {
+  currentIndex += direction;
+
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+
+  showDetailView(currentIndex);
+}
+
+/*function imageNext() {
   currentIndex++;
 
   if (currentIndex >= images.length) {
@@ -47,7 +59,7 @@ function imageBack() {
   }
 
   showDetailView(currentIndex);
-}
+}*/
 
 function closeBtn() {
   const detailContainer = document.getElementById("detail_box");

@@ -12,8 +12,8 @@ function generateDetailContentHTML(i, image) {
     <img src="${image.path}" alt="${image.alt}">
 
     <div class="nextbt">
-    <button onclick="imageBack(${i})"><span style="margin-right: 10px;">⬅️</span><span>zurück</span></button>
-    <button onclick="imageNext(${i})" style="width:69px"><span  style="margin-right: 10px;">vor</span><span>➡️</span></button>
+    <button onclick="navigateDetailImage(-1)"><span style="margin-right: 10px;">⬅️</span><span>zurück</span></button>
+    <button onclick="navigateDetailImage(1)"><span  style="margin-right: 10px;">vor</span><span>➡️</span></button>
 </div>
     </div>
     `;
