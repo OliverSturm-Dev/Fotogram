@@ -8,7 +8,7 @@ function generateGalleryContentHTML(i, image) {
 function generateDetailContentHTML(i, image) {
   return /* html */ `
     <div class="img-test">
-        <div><button onclick="closeBtn()" class="clbtn"><span style="margin-right: 10px;">❌</span><span>CLOSE</span></button></div>
+        <div><button onclick="closeBtn()" class="clbtn"><span style="margin-right: 10px;">❌</span><span style="font-size: 18px;">CLOSE</span></button></div>
     <img src="${image.path}" alt="${image.alt}">
 
     <div class="nextbt">

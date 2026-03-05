@@ -19,9 +19,15 @@ function showDetailView(i) {
   const image = images[i];
   const detailBox = document.getElementById("detail_box");
 
+  if (detailBox.classList.contains("d-none")){
   detailBox.classList.remove("d-none");
   detailBox.innerHTML = generateDetailContentHTML(i, image);
   detailBox.focus();
+}else {
+    const img = detailBox.querySelector("img");
+    img.src = image.path;
+    img.alt = image.alt;
+  }
 }
 
 function closeDetailView() {
@@ -42,40 +48,21 @@ function navigateDetailImage(direction) {
   showDetailView(currentIndex);
 }
 
-/*function imageNext() {
-  currentIndex++;
-
-  if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-
-  showDetailView(currentIndex);
-}
-
-function imageBack() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = images.length - 1;
-  }
-
-  showDetailView(currentIndex);
-}*/
-
 function closeBtn() {
   const detailContainer = document.getElementById("detail_box");
   detailContainer.classList.add("d-none");
 }
 
 function handleOverlayKeys(event) {
-  if (event.key === "Escape") {
+  /*if (event.key === "Escape") {
     closeDetailView();
-  }
+  }*/
 
   if (event.key === "ArrowRight") {
-    imageNext();
+   navigateDetailImage(1);
   }
 
   if (event.key === "ArrowLeft") {
-    imageBack();
+    navigateDetailImage(-1);
   }
 }

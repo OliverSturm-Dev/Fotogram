@@ -99,7 +99,7 @@ button{
 }
 .nextbt button{
   font-size: 18px;
-}
+} 
 .img-test button{
   color: white;
   cursor: pointer;
@@ -107,19 +107,10 @@ button{
   border-radius: 30px;
   transition: 1s;
 }
-.img-test button:hover{
-  transform: scale(1.3);
-  z-index: 2;
-}
 .btimg{
   transition: 1s;
       padding-inline: 0px;
       cursor: pointer;
-}
-.btimg:hover{
-   transform: scale(1.1);
-  z-index: 2;
-  opacity: 0.7;
 }
 @media (max-width: 430px) {
   .logos .dot {
@@ -138,14 +129,9 @@ button{
   }
 }
 @media (max-width: 1023px){
-  .btimg:hover{
-    transform: none;
-  }
   .btimg{
     transition: none;
-  }
-  .img-test button:hover{
-    transform: none;
+    height: 170px;
   }
   .img-test button{
     transition: none;
@@ -153,4 +139,15 @@ button{
 }
 .d-none{
   display:none;
+}
+@media (hover: hover){
+.btimg:hover{
+   transform: scale(1.05);
+  z-index: 2;
+  opacity: 0.7;
+}
+.img-test button:hover{
+  transform: scale(1.3);
+  z-index: 2;
+}
 }
